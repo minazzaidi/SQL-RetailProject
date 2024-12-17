@@ -134,5 +134,14 @@ SELECT agebins, SUM(total_sale) as totalsales FROM
 GROUP BY agebins;
 --Solution: (48 & above	293065, 18-24	149160, 25-36	234880, 37-38	231125)
 
+--12. Write a query to find the total sales in each category by gender
+SELECT 
+category,
+gender,
+SUM(total_sale) as sum_of_sales
+	FROM Retail
+	GROUP BY category, gender
+	ORDER BY SUM(total_sale) DESC;
+
 --END OF PROJECT 
 --THANKS FOR VISITING!!!
